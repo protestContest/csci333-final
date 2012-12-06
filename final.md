@@ -1,7 +1,7 @@
-Zack Michener
-December 7, 2012
-Data Structures
-Final Exam
+Zack Michener  
+December 7, 2012  
+Data Structures  
+Final Exam  
 
 1) Build Automation
 ===================
