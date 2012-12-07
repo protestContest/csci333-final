@@ -9,9 +9,11 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::ifstream;
-using std::ostream;
+using std::ofstream;
 using std::map;
+using std::multimap;
 using std::vector;
+using std::pair;
 
 vector<string>* tokenize(string);
 
@@ -37,6 +39,21 @@ int main(int argc, char** argv) {
         }
     }
 
+    multimap<int, string> reversetc;
+    map<string, int>::iterator it;
+    for (it = tweetcounts.begin(); it != tweetcounts.end(); it++) {
+        reversetc.insert(pair<int, string>(it->second, it->first));
+    }
+
+    ofstream wordsf ("words");
+    if (wordsf.is_open()) {
+        multimap<int, string>::reverse_iterator it;
+        for (it = reversetc.rbegin(); it != reversetc.rend(); it++) {
+            wordsf << it->second << " (" << it->first << ")" << endl;
+        }
+    } else {
+        cout << "File output error" << endl;
+    }
 
     return 0;
 }
