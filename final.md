@@ -86,3 +86,18 @@ which on average is half the length of the list (O(n)).  This makes the total
 time complexity quadratic.  It may be worthwhile to use an external data
 structure to reduce the time complexity of this operation.
 
+b.
+--
+
+Dear Santa,
+
+I was thinking about Klaus and your list, and I think there is a solution in
+Java.  While iterating over the list of names, you can simply increment a key in
+a Java hashmap, where the name is the key.  This will take linear time to
+traverse the list, and since the hashmap is asymptotically constant, the total
+time will take O(n) asymptotically.  Klaus said you mentioned something like
+this earlier.
+
+Zack
+
+
