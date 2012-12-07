@@ -68,4 +68,21 @@ we have to eat is sugar.
 
 Zack
 
+3) Santa's List
+===============
+
+a.
+--
+
+Dear Santa,
+
+I was talking with Klaus at lunch today, and he described the process of
+determining naughty and nice children from your list.  Apparently for each
+distinct name on the list, he goes through the entire rest of the list and
+counts the occurances.  This does not have very good time efficiency.  In the
+worst case, when there are no duplicates of names, Klaus must go through the
+entire list (O(n)), and for each name he must go through the rest of the list,
+which on average is half the length of the list (O(n)).  This makes the total
+time complexity quadratic.  It may be worthwhile to use an external data
+structure to reduce the time complexity of this operation.
 
