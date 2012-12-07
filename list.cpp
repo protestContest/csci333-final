@@ -30,20 +30,29 @@ int main(int argc, char** argv) {
 
     map<string, int>::iterator it;
 
+    int niceCount = 0;
     cout << "Nice" << endl << "----" << endl;
     for (it = counts.begin(); it != counts.end(); it++) {
         if (it->second >= threshhold) {
             cout << it->first << ": " << it->second << endl;
+            ++niceCount;
         }
     }
     cout << endl;
 
+    int naughtyCount = 0;
     cout << "Naughty" << endl << "-------" << endl;
     for (it = counts.begin(); it != counts.end(); it++) {
         if (it->second < threshhold) {
             cout << it->first << ": " << it->second << endl;
+            ++naughtyCount;
         }
     }
+
+    cout << endl;
+    cout << "Summary" << endl << "-------" << endl;
+    cout << "Nice: " << niceCount << endl;
+    cout << "Naughty: " << naughtyCount << endl;
 
     return 0;
 }
