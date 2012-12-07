@@ -138,5 +138,5 @@ worst-case of O(nlogn).
   *Technologies:*
   - Arduino
   - Emotional AI
-  - [LEDee](www.github.com/orangethirty/LEDee)
+  - [LEDee](https://github.com/orangethirty/LEDee)
 
