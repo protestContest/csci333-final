@@ -43,3 +43,29 @@ producing better quality code, faster.
 
 Zack
 
+2) Unit Tests
+=============
+
+Dear Santa,
+
+I was again surprised today, to find that my project manager didn't know what a
+unit test was.  It seems that few elves around here are aware of unit tests,
+much less use them.  I think this is a problem; in my experience, unit tests
+increase developer productivity, code quality, and maintainability.  If a test
+is written for each particular aspect of the program, then it will be trivial to
+pinpoint where the code fails.  This speeds debugging.  In addition to this, it
+becomes harder to clobber existing code when adding new features, because if new
+code screws up old features, tests will immediately fail.  This prevents new
+bugs from being introduced by new code.  When bugs are discovered and fixed, a
+test can be written for that specific bug, ensuring it never appears again.
+This makes sure bugs stay squashed.  Overall, it improves the quality of the
+codebase, and allows your developers to introduce features faster and more
+reliably, despite the time required to write tests.
+
+On another note, is there any way we can get healthier food in the caf?  Candy
+canes and sugar plums are delicious, but I fear for our developers' teeth if all
+we have to eat is sugar.
+
+Zack
+
+
