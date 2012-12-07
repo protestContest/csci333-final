@@ -3,18 +3,22 @@
 #include <string>
 #include <map>
 #include <cstdlib>
+#include <vector>
+#include <cstring>
 using std::cout;
 using std::endl;
 using std::string;
 using std::ifstream;
 using std::ostream;
 using std::map;
+using std::vector;
+
+vector<string>* tokenize(string);
 
 int main(int argc, char** argv) {
-    if (argc != 3) {
-        cout << "Usage: [file] [threshhold]" << endl;
+    if (argc != 2) {
+        cout << "Usage: [file]" << endl;
     }
-    int threshhold = atoi(argv[2]);
 
     map<string, int> tweetcounts;
 
@@ -24,27 +28,30 @@ int main(int argc, char** argv) {
         while (tweetf.good()) {
             getline(tweetf, line);
             if (line != "") {
-                counts[line]++;
+                vector<string>* words = tokenize(line);
+
+                for (int i = 0; i < (int)words->size(); i++) {
+                    tweetcounts[words->at(i)]++;
+                }
             }
         }
     }
 
-    map<string, int>::iterator it;
-
-    cout << "Nice" << endl << "----" << endl;
-    for (it = counts.begin(); it != counts.end(); it++) {
-        if (it->second >= threshhold) {
-            cout << it->first << ": " << it->second << endl;
-        }
-    }
-    cout << endl;
-
-    cout << "Naughty" << endl << "-------" << endl;
-    for (it = counts.begin(); it != counts.end(); it++) {
-        if (it->second < threshhold) {
-            cout << it->first << ": " << it->second << endl;
-        }
-    }
 
     return 0;
+}
+
+vector<string>* tokenize(string s) {
+    vector<string>* words = new vector<string>();
+    char* cstr = new char[s.size()+1];
+    strcpy(cstr, s.c_str());
+
+    char* p = strtok(cstr, " ");
+    while (p != 0) {
+        words->push_back(string(p));
+        p = strtok(0, " ");
+    }    
+
+    delete[] cstr;
+    return words;
 }
