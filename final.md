@@ -106,3 +106,37 @@ c.
 Using an STL map, the worst-case would mean that for every entry, I would search
 the map for the entry and fail, which takes O(logn) for each entry, for a total
 worst-case of O(nlogn).
+
+4) 20% Time
+===========
+
+- Magnet web:  Implements hosting websites over the bittorrent protocol, using
+  magnet link URIs instead of URLs.  This would be impossible to DDOS and
+  difficult to censor.  I would also implement a browser designed to fetch pages
+  over bittorrent.  Site scaling would be automatic---the more people that visit
+  your site, the faster it becomes.
+
+  *Technologies:*
+  - BitTorrent protocol
+  - HTTP protocol
+
+- Magnet database:  Implements a distributed database accessible via the
+  bittorrent protocol, using magnet links.  It would differ from classic
+  file-sharing, since the entire database would typically reside on no one
+  machine, but clients would rather request the pieces needed.  The database
+  would be encrypted to allow multiple users' data to be stored.  This database
+  will allow magnet-websites to store user data.
+
+  *Technologies:*
+  - BitTorrent protocol
+  - NoSQL databases
+
+- Robot:  I would make a robot to sit on my desk and help me code.  It would
+  blink an LED in various ways, depending on its emotions.  Based on the LEDee
+  Arduino project.
+
+  *Technologies:*
+  - Arduino
+  - Emotional AI
+  - orangethirty/LEDee#1
+
