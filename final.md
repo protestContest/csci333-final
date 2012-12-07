@@ -100,4 +100,9 @@ this earlier.
 
 Zack
 
+c.
+--
 
+Using an STL map, the worst-case would mean that for every entry, I would search
+the map for the entry and fail, which takes O(logn) for each entry, for a total
+worst-case of O(nlogn).
